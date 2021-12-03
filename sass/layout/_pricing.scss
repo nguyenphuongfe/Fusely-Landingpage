@@ -1,0 +1,99 @@
+.pricing {
+  padding: 220px 0 220px;
+  text-align: center;
+  @include respond(tab-land){
+    padding: 140px 0 140px;
+    text-align: start;
+  }
+  @include respond(phone){
+    padding: 90px 0 90px;
+  }
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 45px;
+    text-align: center;
+    align-items: center;
+    margin-top: 90px;
+    @include respond(tab-land){
+      gap: 0 20px;
+    }
+    @include respond(tab-port){
+      grid-template-columns: 1fr;
+      gap: 45px 0;
+    }
+    @include respond(phone){
+      margin-top: 40px;
+      gap: 24px 0;
+    }
+  }
+  &-item {
+    font-size: 18px;
+    color: $Neutral-400;
+    background-color: rgba(236, 235, 255, 0.3);
+    border-radius: 2px;
+    padding: 46px 88px;
+    font-weight: 400;
+    width: 363px;
+    height: 421px;
+    // align-items: center;
+    margin: 0 auto;
+    @include respond(tab-land){
+      width: 318px;
+      padding: 45px 53px;
+    }
+    @include respond(tab-port){
+      width: 100%;
+    }
+  }
+  &-note {
+    margin-bottom: 30px;
+  }
+  &-price{
+    font-weight: bold;
+    font-size: 50px;
+    line-height: calc(56 / 50);
+    letter-spacing: -2px;
+    color: $Neutral-500;
+    margin-bottom: 30px;
+    @include respond(phone){
+      font-size: 40px;
+      line-height: calc(50 / 40);
+    }
+    span{
+      font-weight: 400;
+      font-size: 18px;
+      // line-height: calc(56 / 18);
+    }
+  }
+  &-detail{
+    margin-bottom: 30px;
+    span{
+      display: block;
+      letter-spacing: -0.5px;
+    }
+    span:not(:last-child){
+      margin-bottom: 14px;
+
+    }
+  }
+  &-item.is-active,
+  &-item:hover {
+    background-color: $Primary-400;
+    color:rgba(255, 255, 255, 0.8);
+    transition: all 0.3s linear;
+    height: 503px;
+    padding: 70px 90px;
+    @include respond(tab-land){
+      padding: 70px 62px;
+    }
+    .price{
+      color: $Primary-100;
+    }
+    .btn{
+      background-color: $Primary-100;
+      color: $Primary-400;
+      padding: 16px 47px;
+    }
+  }
+}

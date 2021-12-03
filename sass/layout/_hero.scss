@@ -1,0 +1,31 @@
+.hero{
+ padding-bottom: 120px;
+ padding-top: 175px;
+ @include respond(tab-port){
+  padding-top: 100px;
+  padding-bottom: 107px;
+ }
+ @include respond(phone){
+  padding-top: 80px;
+  padding-bottom: 80px;
+ }
+ &-main{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include respond(tab-port){
+   flex-direction: column;
+   width: 100%;
+  }
+ @include respond(phone){
+  flex-direction: column;
+ }
+}
+ &-content{
+  max-width: 490px;
+  @include respond(tab-port){
+   max-width: 100%;
+   margin-bottom: 30px;
+  }
+ }
+}

@@ -1,0 +1,25 @@
+.partners{
+ padding: 0 140px;
+ @include respond(tab-port){
+  padding: 0;
+ }
+ &-content{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0 97px;
+  @include respond(phone){
+   gap: 37px 44px;
+   // grid-template-columns: repeat(3, 1fr);
+   display: flex;
+   align-items: center;
+   width: 100%;
+   flex-wrap: wrap;
+   justify-content: center;
+  }
+ }
+ img{
+  &:hover{
+   opacity: 1;
+  }
+ }
+}

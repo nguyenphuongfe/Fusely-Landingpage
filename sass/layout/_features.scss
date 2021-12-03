@@ -1,0 +1,46 @@
+.features {
+  padding-top: 220px;
+  @include respond(tab-land) {
+    padding-top: 140px;
+  }
+  @include respond(phone) {
+    padding-top: 100px;
+  }
+  &-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 180px;
+    @include respond(tab-land) {
+      gap: 0 47px;
+    }
+    @include respond(tab-port) {
+      flex-direction: column-reverse;
+    }
+  }
+  &-item:not(:last-child) {
+    margin-bottom: 220px;
+    @include respond(tab-land) {
+      margin-bottom: 140px;
+    }
+    @include respond(phone) {
+      margin-bottom: 100px;
+    }
+  }
+  &-img {
+    object-fit: cover;
+    @include respond(tab-port) {
+      width: 100%;
+      margin-top: 50px;
+    }
+    @include respond(phone) {
+      margin-top: 32px;
+    }
+  }
+}
+.reverse {
+  flex-direction: row-reverse;
+  @include respond(tab-port) {
+    flex-direction: column-reverse;
+  }
+}

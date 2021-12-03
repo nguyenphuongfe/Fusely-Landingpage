@@ -1,0 +1,70 @@
+.btn {
+  font-size: 14px;
+  font-weight: bold;
+  border: 1px solid $Primary-400;
+  padding: 16px 30px;
+  display: inline-block;
+  white-space: nowrap;
+  transition: all 0.2s linear;
+  &-secondary {
+    color: $Primary-400;
+    &:hover {
+      color: $Neutral-100;
+      background-color: $Primary-400;
+    }
+  }
+  &-login {
+    margin-right: 15px;
+    @include respond(tab-land){
+      margin-right: 0;
+    }
+    @include respond(tab-port){
+      padding: 16px 71px;
+      margin-right: 0;
+      text-align: center;
+    }
+    @include respond(phone){
+      padding: 14px 69px;
+    }
+  }
+  &-start{
+    @include respond(tab-port){
+      padding: 16px 52px;
+    }
+    @include respond(phone){
+      padding: 14px 50px;
+    }
+  }
+  &-primary {
+    background-color: $Primary-400;
+    color: $Neutral-100;
+    &:hover {
+      background-color: $Neutral-100;
+      color: $Primary-400;
+    }
+  }
+  &--outline{
+    font-size: 16px;
+  }
+}
+//click
+.click {
+  font-weight: 600;
+  font-size: 18px;
+  color: $Neutral-500;
+  line-height: calc(20 / 18);
+  letter-spacing: -1px;
+  position: relative;
+  margin-left: 4px;
+  &::after {
+    position: absolute;
+    content: "";
+    border: 6px solid $Primary-200;
+    bottom: 0;
+    width: 100px;
+    left: calc(50% - 100px / 2);
+    z-index: -1;
+    opacity: 50%;
+    top: 50%;
+  }
+}
